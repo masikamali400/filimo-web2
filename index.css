@@ -1,0 +1,39 @@
+.series-movies-slider {
+    padding: var(--spacing-lg);
+}
+    .switch {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--secondary-gray);
+        border-radius: var(--border-radius-xl);
+        padding: 1px;
+        position: relative;
+    }
+    
+   /* .switcher {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--secondary-gray);
+        border-radius: var(--border-radius-xl);
+        transition: transform 300ms ease-in-out;
+    }*/
+    
+    
+    .switch-item {
+        flex: 1;
+        text-align: center;
+        color:white;
+        background-color: black;
+        border-radius: va(--border-radius-xl);
+        padding: var(--spacing-sm) 0;
+        cursor:pointer;
+    }
+    
+    .active, .switch-item:hover{
+        background-color: var(--secondary-gray);
+        border-radius: var(--border-radius-xl);
+    }
+    

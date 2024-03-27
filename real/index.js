@@ -1,0 +1,1 @@
+document.getElementById("switcher").style.transform= 'translateX(-100%)';

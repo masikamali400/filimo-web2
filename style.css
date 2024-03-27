@@ -1,0 +1,281 @@
+:root {
+    /* typography */
+    --font-family: 'Vazirmatn', sans-serif;
+
+    /* colors */
+    --primary-green: #1cb561;
+    --secondary-gray: rgba(255, 255, 255, .2);
+    --primary-dark: black;
+    --text-white: #fff;
+
+    /* spacings */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+
+    /* header */
+    --header-height: 48px;
+    --header-z-index:9999;
+    --logo-height: 50%;
+
+    /* borders */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+
+    --hero-content-z-index: 3;
+
+    /*hero*/
+    --z-index-hero: 2;
+
+    
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-dark);
+}
+
+button {
+    border: initial;
+}
+
+header {
+    position: sticky;
+    inset: 0;
+    z-index: var(--header-z-index);
+    background-color: var(--primary-dark);
+    height: var(--header-height);
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    position:sticky;
+    z-index: var(--header-z-index);
+}
+
+.logo {
+    height: var(--logo-height);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.button {
+    color: var(--text-white);
+    font-family: var(--font-family);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.button.primary {
+    background-color: var(--primary-green);
+}
+
+.button.secondary {
+    background-color: var(--secondary-gray);
+}
+
+.button.large {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    font-size: 1.25rem;
+}
+
+.button:hover {
+    background-color: var(--primary-green-dark);
+}
+
+
+.search-icon {
+    color: var(--text-white)
+}
+.hero {
+    background-image: url("https://static.cdn.asset.filimo.com/flmt/mov_cvr_144289_1365.jpg?width=1920&quality=90&secret=ZHg01sYoFcXmcuhnYHvF1Q");
+    width: 100%;
+    height: calc(100vh - (var(--header-height) + (2 * var(--spacing-xs))));
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-color: #000;
+    position: relative;
+}
+
+.hero-content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    inset: 0;
+    z-index: var(--hero-content-z-index);
+}
+.over-lay{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 75%);
+    position: absolute;
+    inset:0;
+    z-index:1;
+
+}
+.hero-content h3{
+    font-size: 1.1erm;
+    color:orangered;
+    margin-bottom: var(--spacing-md);
+
+}
+
+.hero-content h2 {
+    color: var(--text-white);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-content .list{
+    margin: var(--spacing-lg) 0;
+    color: var(--text-white);
+}
+.hero-content .list li {
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+}
+.hero-content .features li .icon {
+    color: var(--primary-green);
+    margin-inline-end: var(--spacing-sm);
+}
+
+
+.hero-content .features li:last-child {
+    margin-bottom: 0;
+}
+
+.series-movies-slider {
+    padding: var(--spacing-lg);
+}
+    .switch {
+        display: flex;
+        align-items: center;
+        border: 1px solid var(--secondary-gray);
+        border-radius: var(--border-radius-xl);
+        padding: 1px;
+        position: relative;
+    }
+    
+   /* .switcher {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--secondary-gray);
+        border-radius: var(--border-radius-xl);
+        transition: transform 300ms ease-in-out;
+    }*/
+    
+    
+    .switch-item {
+        flex: 1;
+        text-align: center;
+        color:white;
+        background-color: black;
+        border-radius: va(--border-radius-xl);
+        padding: var(--spacing-sm) 0;
+        cursor:pointer;
+    }
+    
+    .active, .switch-item:hover{
+        background-color: var(--secondary-gray);
+        border-radius: var(--border-radius-xl);
+    }
+    
+.slider{
+    margin: var(--border-radius-lg) 0;
+    display:flex;
+    gap:15px;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+}
+.slider-item{
+    border-radius: var(--border-radius-md);
+    width:150%;
+    height: 200%;
+    overflow: hidden;
+    flex-basis: 150px;
+    flex-shrink: 0;
+    transition: transform 300ms ease-in-out;
+ 
+}
+.slider-item img{
+    width:100%;
+    height:100%;
+}
+
+.slider-item:hover{
+    transform: scale(1.1);
+}
+
+.features-01{
+    padding: var(--spacing-lg) 0;
+    color:white;
+
+}
+.features-01 h2{
+    color:white;
+    font-weight: bold;
+    padding-right:30px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.features-01 .features-img{
+    width:100%;
+}
+
+.features-01 .features-list{
+    margin: 48px 0;
+
+}
+
+.features-01 .features-list .item{
+    display: flex;
+    margin-bottom: var(--spacing-lg);
+}
+.features-01 .features-list .item .icon{
+margin-inline-start: 10px;
+}
+.title-subtitle{
+    display:flex;
+    flex-direction: column;
+    gap:3px;
+}
+.features-01 .features-list .item .title{
+    margin-top:5px;
+    margin-right: 5px;
+}
+.features-01 .features-list .item .subtitle{
+    font-size: 0.75rem;
+    margin-bottom:var(--spacing-xs);
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
